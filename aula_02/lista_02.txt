@@ -1,0 +1,30 @@
+import math
+
+#1
+
+print("Digite seu nome completo:")
+nome = input()
+print(f"Seja bem vindo(a) ao Python, {nome.split()[0]}")
+
+#2
+
+b1 = int(input("Digite a nota do primeiro bimestre da disciplina:")) * 2
+b2 = int(input("Digite a nota do segundo bimestre da disciplina:")) * 3
+mp = (b1 + b2) // 5
+print(mp)
+
+#3
+
+b = int(input("Digite a base e a altura de um retângulo:"))
+a = int(input())
+area = b * a
+perimetro = (2*b) + (2*a)
+diagonal = math.sqrt(b**2 + a**2)
+
+print(f"Área: {area}\nPerímetro: {perimetro}\nDiagonal: {diagonal}")
+
+#4
+
+frase = input("Digite uma frase:")
+print(frase[frase.rindex(" ") + 1:])
+
