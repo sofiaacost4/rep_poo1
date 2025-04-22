@@ -1,0 +1,191 @@
+import math
+#1036
+
+a, b, c = list(map(float,input().split()))
+delta = (b**2) - (4*a*c)
+R1 = (-b + math.sqrt(delta)) / (2*a)
+R2 = (-b - math.sqrt(delta)) / (2*a)
+if a == 0 or delta < 0:
+    print("impossivel de calcular.")
+else:
+    print(f"R1 = {R1:.5f}\nR2 = {R2:.5f}")
+
+
+#1044
+
+a, b = list(map(int,input().split()))
+
+if a > b:
+    resto = a%b
+else:
+    resto = b%a
+
+if resto == 0:
+    print("São múltiplos.")
+else:
+    print("Não são múltiplos.")
+
+
+#1049
+a = str(input())
+b = str(input())
+c = str(input())
+
+if a == "vertebrado":
+    if b == "ave":
+        if c == "carnivoro":
+            print("águia")
+        else:
+            print("pomba")
+    elif b == "mamifero":
+        if c == "onivoro":
+            print("homem")
+        else: 
+            print("vaca")
+elif a == "invertebrado":
+    if b == "inseto":
+        if c == "hematofago":
+            print("pulga")
+        else:
+            print("lagarta")
+    elif b == "anelideo":
+        if c == "hematofago":
+            print("sanguessuga")
+        else:
+            print("minhoca")
+
+
+#1050
+
+DDDs = {
+    "61": "Brasília",
+    "71": "Salvador",
+    "11": "São Paulo",
+    "21": "Rio de Janeiro",
+    "32": "Juiz de Fora",
+    "19": "Campinas",
+    "27": "Vitória",
+    "31": "Belo Horizonte"
+}
+
+DDD = input()
+if DDD not in DDDs:
+    print("DDD não cadastrado.")
+else: 
+    print(f"{DDDs[f"{DDD}"]}")
+
+
+#2424
+
+x, y = input().split()
+x = int(x)
+y = int(y)
+if x >= 0 and y >= 0 and x < 433 and y < 469:
+    print('dentro')
+else:
+    print('fora')
+
+
+#2670
+
+predio = [int(input()) for andar in range(3)]
+tempo_gasto = []
+tempo_gasto.append(predio[0]*4 + predio[1]*2)
+tempo_gasto.append(predio[0]*2 + predio[2]*2)
+tempo_gasto.append(predio[1]*2 + predio[2]*4)
+
+tempo_gasto.sort()
+print(tempo_gasto[0])
+
+
+#1059
+a = 1
+num = []
+for i in range(100):
+    num.append(a)
+    a = a + 1
+
+for i in range(100):
+    if num[i]%2 == 0:
+        print(num[i])
+
+
+#1080
+
+maior = 0
+lista = {}
+posicao = 0
+while posicao < 100:
+    valor = int(input())
+    if(valor > maior):
+        maior = valor
+        lista[valor] = posicao
+    posicao += 1
+print(maior)
+print(lista[maior]+1)
+
+
+#1094
+
+qt = int(input())
+qt_total = 0
+qt_r = 0
+qt_c = 0
+qt_s = 0
+
+for i in range(qte):
+    valores = input().split()
+    quantia, tipo = valores
+    qt_total += int(quantia)
+    
+    if(tipo == "C"):
+        qt_c += int(quantia)
+    else:
+        if(tipo == "R"):
+            qt_r += int(quantia)
+        else:
+            qt_s += int(quantia)
+
+print("Total: %d cobaias" %qt_total)
+print("Total de coelhos: %d" %qt_c)
+print("Total de ratos: %d" %qt_r)
+print("Total de sapos: %d" %qt_s)
+print("Percentual de coelhos: {:.2f} %".format((qt_c/float(qt_total))*100))
+print("Percentual de ratos: {:.2f} %".format((qt_r/float(qt_total))*100))
+print("Percentual de sapos: {:.2f} %".format((qt_s/float(qt_total))*100))
+
+
+#1114
+
+s = int(input())
+while s != 2002:
+    print("senha inválida.")
+    s = int(input())
+else:
+    print("acesso permitido.")
+
+
+#1116
+
+qt = int(input())
+
+for v in range(qt):
+    x,y = list(map(int,input().split()))
+    try:
+        print('%.1f' %(x/float(y)))
+    except:
+        print("divisao impossivel")
+
+
+#1151
+
+#1151
+
+f = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+
+n = int(input())
+s = []
+for i in range(n):
+    s.append(f[i])
+
+print(str(s).replace(",","").replace("[","").replace("]",""))
