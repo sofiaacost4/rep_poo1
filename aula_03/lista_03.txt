@@ -1,0 +1,51 @@
+#1004 
+
+v_1 = int(input())
+v_2 = int(input())
+PROD = v_1 * v_2
+print(f"PROD = {PROD}")
+
+#1005
+
+v_1 = float(input())
+v_2 = float(input())
+
+nota_1 = v_1 * 3.5
+nota_2 = v_2 * 7.5
+
+media = (nota_1 + nota_2) / 11
+
+print(f"Média = {media:.5f}")
+
+#1011
+
+R = float(input())
+pi = 3.14159
+volume = (4/3) * pi * R**3
+
+print(f"Volume = {volume:.3f}")
+
+#2416
+
+e_1 = int(input())
+e_2 = int(input())
+pte = e_1%e_2
+
+if e_1 < 0 or e_1 > 10**8 or e_2 < 0 or e_2 > 100:
+    print("valor inválido")
+else:
+    print(pte)
+
+#1015
+x1,y1 = list(map(float,input().split()))
+x2,y2 = list(map(float,input().split()))
+
+D = math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
+
+print(f"Distância = {D:.4f}")
+
+
+#1930
+T1, T2, T3, T4 = list(map(int,input().split()))
+tomadas = (T1 + T2 + T3 + T4) - 3
+print(tomadas)
