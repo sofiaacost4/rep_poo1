@@ -34,8 +34,17 @@ print(aprovado(60, 70))
 #5
 
 def formatar_nome(nome):
-   return nome[0].upper() + nome[1:].lower()
+    nome = nome.lower()
+    nome = nome.split()
+    r = ""
+    for palavra in nome:
+      if palavra in ["da", "de", "do", "das", "dos","e"]:
+         r = r + palavra + " "
+      else:
+         r = r + (palavra[0].upper()+palavra[1:]) + " "
+    return r
 
-n = input("Insira seu nome:")
+nome = input("Insira seu nome:")
 
-print(formatar_nome(n))
+r = formatar_nome(nome)
+print(r)
